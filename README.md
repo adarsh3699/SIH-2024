@@ -1,10 +1,14 @@
-# Getting Started with Create React App
+# Getting Started with Live preview
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Open [notes.bhemu.me](https://sih-2024-ashy.vercel.app/) to view it in your browser.
 
 ## Available Scripts
 
 In the project directory, you can run:
+
+### `npm install`
+
+To install the in the development mode.
 
 ### `npm start`
 
