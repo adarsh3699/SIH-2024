@@ -1,6 +1,6 @@
 # Getting Started with Live preview
 
-Open [notes.bhemu.me](https://sih-2024-ashy.vercel.app/) to view it in your browser.
+Open [sih-2024-ashy.vercel.app](https://sih-2024-ashy.vercel.app/) to view it in your browser.
 
 ## Available Scripts
 
