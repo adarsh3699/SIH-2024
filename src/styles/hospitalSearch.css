@@ -1,0 +1,71 @@
+body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+	background-color: #f0f0f0;
+}
+
+header {
+	background-color: #333;
+	color: white;
+	text-align: center;
+	padding: 1rem;
+}
+
+main {
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 2rem;
+}
+
+.search-container {
+	display: flex;
+	gap: 1rem;
+	margin-bottom: 2rem;
+}
+
+select,
+button {
+	padding: 0.5rem;
+	font-size: 1rem;
+}
+
+button {
+	cursor: pointer;
+	background-color: #4caf50;
+	color: white;
+	border: none;
+}
+
+button:hover {
+	background-color: #45a049;
+}
+
+.hospital-card {
+	background-color: white;
+	border-radius: 8px;
+	padding: 1rem;
+	margin-bottom: 1rem;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.hospital-card h2 {
+	margin-top: 0;
+}
+
+table {
+	width: 100%;
+	border-collapse: collapse;
+	margin-top: 1rem;
+}
+
+th,
+td {
+	text-align: left;
+	padding: 0.5rem;
+	border-bottom: 1px solid #ddd;
+}
+
+th {
+	background-color: #f2f2f2;
+}

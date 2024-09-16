@@ -1,31 +1,31 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import '../styles/hospitalDashboard.css'; // Move the styles into a separate CSS file
 
+// Sample data (moved from global scope)
+const initialBedStatus = [
+	{ bedNumber: 101, patient: 'John Doe', admissionDate: '2023-06-01', dischargeDate: '2023-06-10' },
+	{ bedNumber: 102, patient: 'Jane Smith', admissionDate: '2023-06-03', dischargeDate: '2023-06-13' },
+	{ bedNumber: 103, patient: null, admissionDate: null, dischargeDate: null },
+	{ bedNumber: 104, patient: 'Bob Johnson', admissionDate: '2023-06-05', dischargeDate: '2023-06-15' },
+	{ bedNumber: 105, patient: null, admissionDate: null, dischargeDate: null },
+];
+
+const availableDoctors = [
+	{ name: 'Dr. Emily Brown', department: 'Cardiology' },
+	{ name: 'Dr. Michael Lee', department: 'Neurology' },
+	{ name: 'Dr. Sarah Parker', department: 'Pediatrics' },
+	{ name: 'Dr. David Kim', department: 'Orthopedics' },
+];
+
+const initialRequests = [
+	{ id: 'REQ001', name: 'Alice Cooper', sex: 'Female', ageRange: '30-40', severity: 7 },
+	{ id: 'REQ002', name: 'Bob Dylan', sex: 'Male', ageRange: '60-70', severity: 9 },
+	{ id: 'REQ003', name: 'Carol Danvers', sex: 'Female', ageRange: '20-30', severity: 3 },
+	{ id: 'REQ004', name: 'David Bowie', sex: 'Male', ageRange: '50-60', severity: 6 },
+	{ id: 'REQ005', name: 'Eva Green', sex: 'Female', ageRange: '40-50', severity: 5 },
+];
+
 const HospitalDashboard = () => {
-	// Sample data (moved from global scope)
-	const initialBedStatus = [
-		{ bedNumber: 101, patient: 'John Doe', admissionDate: '2023-06-01', dischargeDate: '2023-06-10' },
-		{ bedNumber: 102, patient: 'Jane Smith', admissionDate: '2023-06-03', dischargeDate: '2023-06-13' },
-		{ bedNumber: 103, patient: null, admissionDate: null, dischargeDate: null },
-		{ bedNumber: 104, patient: 'Bob Johnson', admissionDate: '2023-06-05', dischargeDate: '2023-06-15' },
-		{ bedNumber: 105, patient: null, admissionDate: null, dischargeDate: null },
-	];
-
-	const availableDoctors = [
-		{ name: 'Dr. Emily Brown', department: 'Cardiology' },
-		{ name: 'Dr. Michael Lee', department: 'Neurology' },
-		{ name: 'Dr. Sarah Parker', department: 'Pediatrics' },
-		{ name: 'Dr. David Kim', department: 'Orthopedics' },
-	];
-
-	const initialRequests = [
-		{ id: 'REQ001', name: 'Alice Cooper', sex: 'Female', ageRange: '30-40', severity: 7 },
-		{ id: 'REQ002', name: 'Bob Dylan', sex: 'Male', ageRange: '60-70', severity: 9 },
-		{ id: 'REQ003', name: 'Carol Danvers', sex: 'Female', ageRange: '20-30', severity: 3 },
-		{ id: 'REQ004', name: 'David Bowie', sex: 'Male', ageRange: '50-60', severity: 6 },
-		{ id: 'REQ005', name: 'Eva Green', sex: 'Female', ageRange: '40-50', severity: 5 },
-	];
-
 	// State management
 	const [bedStatus, setBedStatus] = useState(initialBedStatus);
 	const [requests, setRequests] = useState(initialRequests);

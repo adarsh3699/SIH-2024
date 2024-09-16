@@ -8,6 +8,8 @@ import Loader from './components/loader/Loader';
 const HomePage = lazy(() => import('./pages/HomePage'));
 const HospitalRegPage = lazy(() => import('./pages/HospitalRegPage'));
 const HospitalDashboard = lazy(() => import('./pages/HospitalDashboard'));
+const HospitalSearch = lazy(() => import('./pages/HospitalSearch'));
+const PatientPortal = lazy(() => import('./pages/PatientPortal'));
 // const SettingsPage = lazy(() => import('./pages/SettingsPage'));
 
 function Routes() {
@@ -27,8 +29,8 @@ function Routes() {
 				<Route exact path="/" element={<HomePage />} />
 				<Route exact path="/hospital-registration" element={<HospitalRegPage />} />
 				<Route exact path="/hospital-dashboard" element={<HospitalDashboard />} />
-				{/* <Route path="/share/*" element={<HomePage />} /> */}
-				{/* <Route exact path="/settings" element={<SettingsPage />} /> */}
+				<Route exact path="/hospital-search" element={<HospitalSearch />} />
+				<Route exact path="/patient-portal" element={<PatientPortal />} />
 				<Route exact path="/home" element={<Navigate to="/" />} />
 
 				<Route
