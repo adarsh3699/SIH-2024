@@ -122,7 +122,7 @@ const HospitalDashboard = () => {
 				</div>
 			</div>
 
-			{isBedModalOpen && modalData && (
+			{isBedModalOpen && (
 				<div className="modal">
 					<div className="modal-content">
 						<span className="close" onClick={closeBedModal}>
