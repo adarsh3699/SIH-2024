@@ -96,7 +96,7 @@ select {
 .dropdown-check-list.visible .items {
 	display: block;
 }
-.error {
+.errorMsg {
 	color: red;
 	font-size: 0.9em;
 	margin-top: 5px;

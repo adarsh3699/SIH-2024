@@ -1,7 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import '../styles/hospitalRegPage.css'; // Add your styling here
 
+import { apiCall, extractEncryptedToken } from '../utils';
+import ShowMsg from '../components/showMsg/ShowMsg';
+
 const HospitalRegPage = () => {
+	const [msg, setMsg] = useState({ text: '', type: '' });
 	const [states] = useState([
 		'Andhra Pradesh',
 		'Arunachal Pradesh',
@@ -78,6 +82,17 @@ const HospitalRegPage = () => {
 		}
 	}, [selectedState]);
 
+	const handleMsgShown = useCallback((msgText, type) => {
+		if (msgText) {
+			setMsg({ text: msgText, type: type });
+			setTimeout(() => {
+				setMsg({ text: '', type: '' });
+			}, 2500);
+		} else {
+			console.log('Please Provide Text Msg');
+		}
+	}, []);
+
 	const handleCheckboxChange = (event, setter, list) => {
 		const value = event.target.value;
 		if (event.target.checked) {
@@ -106,19 +121,48 @@ const HospitalRegPage = () => {
 		}
 	};
 
-	const handleSubmit = (e) => {
-		e.preventDefault();
-		console.log('Form submitted');
+	const handleSubmit = useCallback(
+		async (e) => {
+			e.preventDefault();
+			let toSend = {};
 
-		// Access form data
-		const formData = new FormData(e.target);
-		for (let [key, value] of formData.entries()) {
-			console.log(key, value);
-		}
+			// Access form data
+			const formData = new FormData(e.target);
+			for (let [key, value] of formData.entries()) {
+				// console.log(key, value);
+				toSend = { ...toSend, [key]: value };
+			}
 
-		console.log('Selected Departments:', selectedDepartments);
-		console.log('Selected Facilities:', selectedFacilities);
-	};
+			console.log(toSend);
+
+			console.log('Selected Departments:', selectedDepartments);
+			console.log('Selected Facilities:', selectedFacilities);
+
+			const apiResp = await apiCall('hospital/signup', 'post', {
+				...toSend,
+				departmentsAvailable: selectedDepartments,
+				facilitiesAvailable: selectedFacilities,
+			});
+			console.log(apiResp.status);
+
+			if (apiResp.statusCode === 200) {
+				// const extractedToken = extractEncryptedToken(apiResp.jwt);
+				// const userDetails = {
+				// 	...apiResp.details,
+				// 	email: extractedToken?.email,
+				// };
+
+				// localStorage.setItem('user_details', JSON.stringify(userDetails));
+				// localStorage.setItem('JWT_token', apiResp.jwt);
+				// localStorage.setItem('login_info', apiResp.loginInfo);
+				document.location.href = '/';
+			} else {
+				handleMsgShown(apiResp.msg, 'error');
+			}
+			// setIsApiLoading(false);
+		},
+		[handleMsgShown, selectedDepartments, selectedFacilities]
+	);
 
 	return (
 		<div className="container">
@@ -144,7 +188,16 @@ const HospitalRegPage = () => {
 					</div>
 				</div>
 
-				{/* Other form fields */}
+				<div className="form-row">
+					<div className="form-group">
+						<label htmlFor="googleMapsLink">Google Maps Link</label>
+						<input type="url" id="googleMapsLink" name="googleMapsLink" required />
+					</div>
+					<div className="form-group">
+						<label htmlFor="phone">Phone</label>
+						<input type="tel" id="phone" name="phone" required />
+					</div>
+				</div>
 
 				<div className="form-row">
 					<div className="form-group">
@@ -170,30 +223,30 @@ const HospitalRegPage = () => {
 						</select>
 					</div>
 				</div>
-				<div class="form-row">
-					<div class="form-group">
-						<label for="address">Address</label>
+				<div className="form-row">
+					<div className="form-group">
+						<label htmlFor="address">Address</label>
 						<input type="text" id="address" name="address" required />
 					</div>
-					<div class="form-group">
-						<label for="hospitalWebsite">Hospital Website</label>
+					<div className="form-group">
+						<label htmlFor="hospitalWebsite">Hospital Website</label>
 						<input type="url" id="hospitalWebsite" name="hospitalWebsite" />
 					</div>
 				</div>
 
-				<div class="form-row">
-					<div class="form-group">
-						<label for="averageOPD">Average OPD Registration per Day</label>
+				<div className="form-row">
+					<div className="form-group">
+						<label htmlFor="averageOPD">Average OPD Registration per Day</label>
 						<input type="number" id="averageOPD" name="averageOPD" required />
 					</div>
-					<div class="form-group">
-						<label for="numberOfBeds">Number of Beds</label>
+					<div className="form-group">
+						<label htmlFor="numberOfBeds">Number of Beds</label>
 						<input type="number" id="numberOfBeds" name="numberOfBeds" required />
 					</div>
 				</div>
 
-				<div class="form-group">
-					<label for="numberOfDoctors">Number of Doctors</label>
+				<div className="form-group">
+					<label htmlFor="numberOfDoctors">Number of Doctors</label>
 					<input type="number" id="numberOfDoctors" name="numberOfDoctors" required />
 				</div>
 				<br />
@@ -245,16 +298,18 @@ const HospitalRegPage = () => {
 					<div className="form-group">
 						<label htmlFor="username">Username</label>
 						<input type="text" id="username" name="username" required onChange={handleUsernameChange} />
-						{usernameError && <div className="error">{usernameError}</div>}
+						{usernameError && <div className="errorMsg">{usernameError}</div>}
 					</div>
 					<div className="form-group">
 						<label htmlFor="password">Password</label>
 						<input type="password" id="password" name="password" required onChange={handlePasswordChange} />
-						{passwordError && <div className="error">{passwordError}</div>}
+						{passwordError && <div className="errorMsg">{passwordError}</div>}
 					</div>
 				</div>
 				<button type="submit">Register Hospital</button>
 			</form>
+
+			{msg && <ShowMsg msgText={msg?.text} type={msg?.type} />}
 		</div>
 	);
 };
