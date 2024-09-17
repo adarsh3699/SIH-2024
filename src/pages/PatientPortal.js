@@ -7,7 +7,7 @@ const PatientPortal = () => {
 			<h1>Patient Portal</h1>
 			<p>Choose an option to proceed with your appointment</p>
 			<div className="button-container">
-				<button className="button button-primary" onClick="navigateTo('/hospital-list')">
+				<button className="button button-primary">
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
 						width="24"
@@ -27,7 +27,7 @@ const PatientPortal = () => {
 					</svg>
 					View Hospital List
 				</button>
-				<button className="button button-secondary" onClick="navigateTo('/patient-form')">
+				<button className="button button-secondary">
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
 						width="24"
