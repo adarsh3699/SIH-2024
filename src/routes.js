@@ -14,6 +14,7 @@ const UserSignup = lazy(() => import("./pages/UserSignup"));
 const UserForgetPass = lazy(() => import("./pages/UserForgetPass"));
 const AboutUs = lazy(() => import("./pages/AboutUs"));
 const ContactUs = lazy(() => import("./pages/ContactUs"));
+const UserEmergencyForm = lazy(() => import("./pages/UserEmergencyForm"));
 
 function Routes() {
 	return (
@@ -135,6 +136,17 @@ function Routes() {
 						<>
 							<NabBar />
 							<ContactUs />
+						</>
+					}
+				/>
+
+				<Route
+					exact
+					path="/emergency-form"
+					element={
+						<>
+							<NabBar />
+							<UserEmergencyForm />
 						</>
 					}
 				/>

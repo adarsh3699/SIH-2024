@@ -29,7 +29,7 @@ const PatientPortal = () => {
 						</svg>
 						OPD Appointment
 					</NavLink>
-					<NavLink className="button button-secondary">
+					<NavLink className="button button-secondary" to="/emergency-form">
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
 							width="24"

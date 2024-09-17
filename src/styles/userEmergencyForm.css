@@ -1,0 +1,99 @@
+#UserEmergencyForm {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#UserEmergencyForm .container {
+	padding: 20px;
+	border-radius: 10px;
+	width: 100%;
+	max-width: 800px;
+}
+#UserEmergencyForm .logo {
+	width: 50px;
+	height: 50px;
+	margin-bottom: 20px;
+}
+#UserEmergencyForm h1,
+#UserEmergencyForm h2 {
+	color: #2c7a7b;
+	margin: 0;
+}
+#UserEmergencyForm h1 {
+	font-size: 36px;
+	margin-bottom: 5px;
+}
+#UserEmergencyForm h2 {
+	font-size: 28px;
+	margin-bottom: 20px;
+}
+#UserEmergencyForm p {
+	color: #2c7a7b;
+	margin-bottom: 20px;
+}
+#UserEmergencyForm .form-content {
+	display: flex;
+	gap: 20px;
+}
+#UserEmergencyForm .form-fields {
+	flex: 1;
+}
+#UserEmergencyForm .form-group {
+	margin-bottom: 15px;
+}
+#UserEmergencyForm label {
+	display: block;
+	margin-bottom: 5px;
+	color: #2c7a7b;
+}
+#UserEmergencyForm input[type="text"],
+#UserEmergencyForm input[type="number"] {
+	width: 100%;
+	padding: 8px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+}
+#UserEmergencyForm .location-input {
+	position: relative;
+}
+#UserEmergencyForm .location-input input {
+	padding-left: 30px;
+}
+#UserEmergencyForm .location-icon {
+	position: absolute;
+	left: 8px;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 16px;
+	height: 16px;
+	color: #2c7a7b;
+}
+#UserEmergencyForm .image-upload {
+	flex: 1;
+	height: 200px;
+	border: 2px dashed #2c7a7b;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	background-color: white;
+}
+#UserEmergencyForm .image-upload img {
+	max-width: 50px;
+	max-height: 50px;
+}
+#UserEmergencyForm .start-btn {
+	background-color: #2c7a7b;
+	color: white;
+	border: none;
+	padding: 10px 20px;
+	border-radius: 4px;
+	cursor: pointer;
+	font-size: 16px;
+	display: block;
+	margin: 20px auto 0;
+}
