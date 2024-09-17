@@ -30,7 +30,7 @@ const UserLogin = () => {
 		if (apiResp.statusCode === 200) {
 			const extractedToken = extractEncryptedToken(apiResp.jwt);
 			const userDetails = {
-				...apiResp.details,
+				type: 'user',
 				email: extractedToken?.email,
 			};
 

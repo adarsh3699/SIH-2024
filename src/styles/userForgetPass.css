@@ -1,4 +1,4 @@
-body {
+#forgot_password {
 	font-family: Arial, sans-serif;
 	/* background-image: url('https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202024-09-16%20211418-OPHb3QZpai2W0l6uUDqdLs2uvANepi.png'); */
 	background-size: cover;
@@ -6,11 +6,10 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	height: 100vh;
+	height: calc(100vh - 60px);
 	margin: 0;
-	background-color: #dbf4ff;
 }
-.logo {
+#forgot_password .logo {
 	position: absolute;
 	top: 20px;
 	left: 20px;
@@ -18,26 +17,26 @@ body {
 	height: 80px;
 	padding-left: 40px;
 }
-.container {
+#forgot_password .container {
 	background-color: rgba(255, 255, 255, 0.9);
 	padding: 20px;
 	border-radius: 30px;
 	box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 	width: 280px;
 }
-h1 {
+#forgot_password h1 {
 	text-align: center;
 	color: #333;
 	font-size: 1.5em;
 	margin-bottom: 15px;
 }
-p {
+#forgot_password p {
 	text-align: center;
 	color: #666;
 	font-size: 0.9em;
 	margin-bottom: 20px;
 }
-input[type='email'] {
+#forgot_password input[type='email'] {
 	width: 100%;
 	padding: 8px;
 	margin: 5px 0;
@@ -45,13 +44,13 @@ input[type='email'] {
 	border-radius: 15px;
 	box-sizing: border-box;
 }
-label {
+#forgot_password label {
 	display: block;
 	margin-top: 8px;
 	color: #666;
 	font-size: 0.9em;
 }
-button {
+#forgot_password button {
 	width: 100%;
 	padding: 10px;
 	background-color: #448e94;
@@ -61,15 +60,15 @@ button {
 	cursor: pointer;
 	margin-top: 15px;
 }
-button:hover {
+#forgot_password button:hover {
 	background-color: #4a9e94;
 }
-.login-link {
+#forgot_password .login-link {
 	text-align: center;
 	margin-top: 15px;
 	font-size: 0.9em;
 }
-.login-link a {
+#forgot_password .login-link a {
 	color: #5cb3a7;
 	text-decoration: none;
 }

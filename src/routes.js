@@ -1,19 +1,19 @@
-import React, { Suspense, lazy } from 'react';
-import { Navigate, Routes as Switch, Route } from 'react-router-dom';
-import Loader from './components/loader/Loader';
-import NabBar from './components/nabBar/NabBar';
+import React, { Suspense, lazy } from "react";
+import { Navigate, Routes as Switch, Route } from "react-router-dom";
+import Loader from "./components/loader/Loader";
+import NabBar from "./components/nabBar/NabBar";
 
-const HomePage = lazy(() => import('./pages/HomePage'));
-const HospitalLogin = lazy(() => import('./pages/HospitalLogin'));
-const HospitalRegPage = lazy(() => import('./pages/HospitalRegPage'));
-const HospitalDashboard = lazy(() => import('./pages/HospitalDashboard'));
-const HospitalSearch = lazy(() => import('./pages/HospitalSearch'));
-const PatientPortal = lazy(() => import('./pages/PatientPortal'));
-const UserLogin = lazy(() => import('./pages/UserLogin'));
-const UserSignup = lazy(() => import('./pages/UserSignup'));
-const UserForgetPass = lazy(() => import('./pages/UserForgetPass'));
-const AboutUs = lazy(() => import('./pages/AboutUs'));
-const ContactUs = lazy(() => import('./pages/ContactUs'));
+const HomePage = lazy(() => import("./pages/HomePage"));
+const HospitalLogin = lazy(() => import("./pages/HospitalLogin"));
+const HospitalRegPage = lazy(() => import("./pages/HospitalRegPage"));
+const HospitalDashboard = lazy(() => import("./pages/HospitalDashboard"));
+const HospitalSearch = lazy(() => import("./pages/HospitalSearch"));
+const PatientPortal = lazy(() => import("./pages/PatientPortal"));
+const UserLogin = lazy(() => import("./pages/UserLogin"));
+const UserSignup = lazy(() => import("./pages/UserSignup"));
+const UserForgetPass = lazy(() => import("./pages/UserForgetPass"));
+const AboutUs = lazy(() => import("./pages/AboutUs"));
+const ContactUs = lazy(() => import("./pages/ContactUs"));
 
 function Routes() {
 	return (
@@ -21,7 +21,7 @@ function Routes() {
 			fallback={
 				<div id="loadingScreen">
 					Loading
-					<Loader isLoading={true} sx={{ marginTop: '10px' }} />
+					<Loader isLoading={true} sx={{ marginTop: "10px" }} />
 				</div>
 			}
 		>
