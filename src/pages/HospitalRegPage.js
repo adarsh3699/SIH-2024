@@ -190,8 +190,8 @@ const HospitalRegPage = () => {
 
 				<div className="form-row">
 					<div className="form-group">
-						<label htmlFor="googleMapsLink">Google Maps Link</label>
-						<input type="url" id="googleMapsLink" name="googleMapsLink" required />
+						<label htmlFor="email">Email</label>
+						<input type="email" id="email" name="email" required />
 					</div>
 					<div className="form-group">
 						<label htmlFor="phone">Phone</label>
@@ -228,9 +228,10 @@ const HospitalRegPage = () => {
 						<label htmlFor="address">Address</label>
 						<input type="text" id="address" name="address" required />
 					</div>
+
 					<div className="form-group">
-						<label htmlFor="hospitalWebsite">Hospital Website</label>
-						<input type="url" id="hospitalWebsite" name="hospitalWebsite" />
+						<label htmlFor="googleMapsLink">Google Maps Link</label>
+						<input type="url" id="googleMapsLink" name="googleMapsLink" required />
 					</div>
 				</div>
 
@@ -245,9 +246,15 @@ const HospitalRegPage = () => {
 					</div>
 				</div>
 
-				<div className="form-group">
-					<label htmlFor="numberOfDoctors">Number of Doctors</label>
-					<input type="number" id="numberOfDoctors" name="numberOfDoctors" required />
+				<div className="form-row">
+					<div className="form-group">
+						<label htmlFor="numberOfDoctors">Number of Doctors</label>
+						<input type="number" id="numberOfDoctors" name="numberOfDoctors" required />
+					</div>
+					<div className="form-group">
+						<label htmlFor="hospitalWebsite">Hospital Website</label>
+						<input type="url" id="hospitalWebsite" name="hospitalWebsite" />
+					</div>
 				</div>
 				<br />
 				<div className="form-row">
