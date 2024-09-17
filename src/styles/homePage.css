@@ -9,35 +9,11 @@ body {
 	margin: 0 auto;
 	padding: 20px;
 }
-.emergency-call{
-	color: rgb(255,86,87,255);
+.emergency-call {
+	color: rgb(255, 86, 87, 255);
 	font-weight: bold;
 }
-nav {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding: 10px 40px;
-	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-	font-size: 20px;
-}
-.logo {
-	display: flex;
-	align-items: center;
-}
-.logo img {
-	width: 80px;
-	height: 80px;
-}
-.nav-links {
-	display: flex;
-	gap: 50px;
-}
-.nav-links a {
-	margin-left: 20px;
-	text-decoration: none;
-	color: #333;
-}
+
 .main-content {
 	display: flex;
 	justify-content: space-between;
@@ -57,14 +33,19 @@ p {
 }
 .buttons {
 	display: flex;
-	gap: 10px;
+	gap: 20px;
 }
+
 .btn {
-	padding: 10px 20px;
+	padding: 12px;
+	width: 150px;
 	border: none;
-	border-radius: 5px;
+	border-radius: 10px;
 	cursor: pointer;
 	font-size: 1em;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
 }
 .btn-hospital {
 	background-color: #448e94;
@@ -78,8 +59,12 @@ p {
 	max-width: 50%;
 }
 .image-content img {
-	width: 100%;
+	z-index: 100;
+	width: 50%;
 	height: auto;
+	bottom: 0;
+	right: 0;
+	position: fixed;
 }
 #typing-text {
 	min-height: 1.2em;

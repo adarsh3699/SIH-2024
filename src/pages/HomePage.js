@@ -1,7 +1,13 @@
 import React, { useState, useEffect } from 'react';
+
 import '../styles/homePage.css';
-import Wellcare from '../imgs/WellCare-removebg-preview.png';
+
 import professional from '../imgs/doctor-nurses-special-equipment.png';
+import hospitalLogo from '../imgs/hospitalLogo.svg';
+import userLogo from '../imgs/userLogo.svg';
+
+import NabBar from '../components/nabBar/NabBar';
+import { NavLink } from 'react-router-dom';
 
 const texts = ["Book your Doctor's appointment", 'Get expert medical care today'];
 const typingSpeed = 100;
@@ -42,17 +48,7 @@ function App() {
 
 	return (
 		<>
-			<nav>
-				<div className="logo">
-					<img src={Wellcare} alt="Logo" />
-				</div>
-				<div className="nav-links">
-					<a href="/">Main</a>
-					<a href="/">About</a>
-					<a href="/">Contact Us</a>
-					<a href="/">Help</a>
-				</div>
-			</nav>
+			<NabBar />
 			<div className="container">
 				<div className="main-content">
 					<div className="text-content">
@@ -62,8 +58,14 @@ function App() {
 						<p id="typing-text">{displayText}</p>
 						<p>Quick, easy, and convenient.</p>
 						<div className="buttons">
-							<button className="btn btn-hospital">HOSPITAL</button>
-							<button className="btn btn-user">USER</button>
+							<button className="btn btn-hospital">
+								HOSPITAL
+								<img src={hospitalLogo} alt="" />
+							</button>
+							<button className="btn btn-user">
+								USER
+								<img src={userLogo} alt="" />
+							</button>
 						</div>
 					</div>
 					<div className="image-content">
