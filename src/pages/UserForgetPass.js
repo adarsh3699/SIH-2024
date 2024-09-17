@@ -1,12 +1,12 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-
+import Niraksh from '../imgs/WellCare-removebg-preview.png'
 import '../styles/userForgetPass.css';
 
 const UserForgetPass = () => {
 	return (
 		<div id="forgot_password">
-			<img src="/placeholder.svg?height=50&width=50" alt="Logo" class="logo" />
+			<img src={Niraksh} alt="Logo" class="logo" />
 			<div class="container">
 				<h1>Forgot Password</h1>
 				<p>Enter your email address and we'll send you a OTP to reset your password.</p>

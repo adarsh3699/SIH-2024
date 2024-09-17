@@ -1,6 +1,6 @@
 body {
 	font-family: Arial, sans-serif;
-	background-color: #e6f2ff;
+	background-color: #dbf4ff;
 	margin: 0;
 	padding: 20px;
 }
@@ -102,7 +102,7 @@ select {
 	margin-top: 5px;
 }
 button {
-	background-color: #4caf50;
+	background-color: #448e94;
 	color: white;
 	padding: 10px 15px;
 	border: none;
@@ -112,5 +112,5 @@ button {
 	width: 100%;
 }
 button:hover {
-	background-color: #45a049;
+	background-color: #4a9e94;
 }

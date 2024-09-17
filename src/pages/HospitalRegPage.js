@@ -3,7 +3,7 @@ import '../styles/hospitalRegPage.css'; // Add your styling here
 
 import { apiCall, extractEncryptedToken } from '../utils';
 import ShowMsg from '../components/showMsg/ShowMsg';
-
+import Niraksh from '../imgs/WellCare-removebg-preview.png'
 const HospitalRegPage = () => {
 	const [msg, setMsg] = useState({ text: '', type: '' });
 	const [states] = useState([
@@ -167,7 +167,7 @@ const HospitalRegPage = () => {
 	return (
 		<div className="container">
 			<div className="header">
-				<img src="https://via.placeholder.com/50" alt="Logo" />
+				<img src={Niraksh} alt="Logo" />
 				<h1>Hospital Registration Dashboard</h1>
 			</div>
 			<p>Register your hospital by providing the following details</p>
