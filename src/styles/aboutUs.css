@@ -28,6 +28,8 @@
 	align-items: center;
 }
 #aboutUs .text {
+	font-weight: 600;
+	font-size: 25px;
 	flex: 1;
 	padding-right: 40px;
 }
