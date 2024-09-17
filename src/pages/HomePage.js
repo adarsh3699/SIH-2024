@@ -56,9 +56,9 @@ function App() {
 			<div className="container">
 				<div className="main-content">
 					<div className="text-content">
-						<h1>Book Your Doctor's Appointment Online</h1>
+						<h1>Every emergency call is a call for hope and help</h1>
 						<p id="typing-text">{displayText}</p>
-						<p>Quick, easy, and convenient. Schedule your next visit with just a few clicks.</p>
+						<p>Quick, easy, and convenient.</p>
 						<div className="buttons">
 							<button className="btn btn-hospital">HOSPITAL</button>
 							<button className="btn btn-user">USER</button>
