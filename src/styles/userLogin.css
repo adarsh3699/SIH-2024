@@ -6,30 +6,30 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	height: 100vh;
+	height: 80vh;
 }
-.logo {
+#UserLogin .logo {
 	position: absolute;
 	top: 20px;
 	left: 20px;
 	width: 50px;
 	height: 50px;
 }
-.container {
+#UserLogin .container {
 	background-color: rgba(255, 255, 255, 0.9);
 	padding: 20px;
 	border-radius: 30px;
 	box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 	width: 280px;
 }
-h1 {
+#UserLogin h1 {
 	text-align: center;
 	color: #333;
 	font-size: 1.5em;
 	margin-bottom: 15px;
 }
-input[type='email'],
-input[type='password'] {
+#UserLogin input[type='email'],
+#UserLogin input[type='password'] {
 	width: 100%;
 	padding: 8px;
 	margin: 5px 0;
@@ -37,13 +37,13 @@ input[type='password'] {
 	border-radius: 15px;
 	box-sizing: border-box;
 }
-label {
+#UserLogin label {
 	display: block;
 	margin-top: 8px;
 	color: #666;
 	font-size: 0.9em;
 }
-button {
+#UserLogin button {
 	width: 100%;
 	padding: 10px;
 	background-color: #5cb3a7;
@@ -53,10 +53,10 @@ button {
 	cursor: pointer;
 	margin-top: 15px;
 }
-button:hover {
+#UserLogin button:hover {
 	background-color: #4a9e94;
 }
-.google-btn {
+#UserLogin .google-btn {
 	background-color: white;
 	color: #666;
 	border: 1px solid #ddd;
@@ -65,15 +65,15 @@ button:hover {
 	justify-content: center;
 	gap: 10px;
 }
-.google-btn:hover {
+#UserLogin .google-btn:hover {
 	background-color: #f5f5f5;
 }
-.links {
+#UserLogin .links {
 	text-align: center;
 	margin-top: 15px;
 	font-size: 0.9em;
 }
-.links a {
+#UserLogin .links a {
 	color: #5cb3a7;
 	text-decoration: none;
 	display: block;

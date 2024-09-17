@@ -6,7 +6,6 @@ import '../styles/userLogin.css';
 const UserLogin = () => {
 	return (
 		<div id="UserLogin">
-			<img src="/placeholder.svg?height=50&width=50" alt="Logo" className="logo" />
 			<div className="container">
 				<h1>Login</h1>
 				<form id="login-form">
