@@ -6,6 +6,7 @@ import Loader from './components/loader/Loader';
 // const ForgetPasswordPage = lazy(() => import('./pages/ForgetPasswordPage'));
 // const CreateAcc = lazy(() => import('./pages/CreateAcc'));
 const HomePage = lazy(() => import('./pages/HomePage'));
+const HospitalLogin = lazy(() => import('./pages/HospitalLogin'));
 const HospitalRegPage = lazy(() => import('./pages/HospitalRegPage'));
 const HospitalDashboard = lazy(() => import('./pages/HospitalDashboard'));
 const HospitalSearch = lazy(() => import('./pages/HospitalSearch'));
@@ -27,6 +28,7 @@ function Routes() {
 			<Switch>
 				<Route exact path="/" element={<HomePage />} />
 				<Route exact path="/home" element={<Navigate to="/" />} />
+				<Route exact path="/hospital-login" element={<HospitalLogin />} />
 				<Route exact path="/hospital-registration" element={<HospitalRegPage />} />
 				<Route exact path="/hospital-dashboard" element={<HospitalDashboard />} />
 				<Route exact path="/hospital-search" element={<HospitalSearch />} />
