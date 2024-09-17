@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import '../styles/hospitalRegPage.css'; // Add your styling here
 
-import { apiCall, extractEncryptedToken } from '../utils';
+import { apiCall } from '../utils';
 import ShowMsg from '../components/showMsg/ShowMsg';
 
 const HospitalRegPage = () => {
@@ -146,16 +146,7 @@ const HospitalRegPage = () => {
 			console.log(apiResp.status);
 
 			if (apiResp.statusCode === 200) {
-				// const extractedToken = extractEncryptedToken(apiResp.jwt);
-				// const userDetails = {
-				// 	...apiResp.details,
-				// 	email: extractedToken?.email,
-				// };
-
-				// localStorage.setItem('user_details', JSON.stringify(userDetails));
-				// localStorage.setItem('JWT_token', apiResp.jwt);
-				// localStorage.setItem('login_info', apiResp.loginInfo);
-				document.location.href = '/';
+				document.location.href = '/hospital-registration';
 			} else {
 				handleMsgShown(apiResp.msg, 'error');
 			}

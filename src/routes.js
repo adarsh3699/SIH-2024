@@ -80,7 +80,7 @@ function Routes() {
 				/>
 				<Route
 					exact
-					path="/patient-portal"
+					path="/user-dashboard"
 					element={
 						<>
 							<NabBar />

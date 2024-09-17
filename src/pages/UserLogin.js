@@ -1,14 +1,52 @@
-import React from 'react';
+import React, { useCallback, useState } from 'react';
 import { NavLink } from 'react-router-dom';
+import { apiCall, extractEncryptedToken } from '../utils';
+import ShowMsg from '../components/showMsg/ShowMsg';
 
 import '../styles/userLogin.css';
 
 const UserLogin = () => {
+	const [msg, setMsg] = useState({ text: '', type: '' });
+
+	const handleMsgShown = useCallback((msgText, type) => {
+		if (msgText) {
+			setMsg({ text: msgText, type: type });
+			setTimeout(() => {
+				setMsg({ text: '', type: '' });
+			}, 2500);
+		} else {
+			console.log('Please Provide Text Msg');
+		}
+	}, []);
+	const handleSubmit = useCallback(async (e) => {
+		e.preventDefault();
+		const formData = {
+			email: e.target.email.value,
+			password: e.target.password.value,
+		};
+
+		const apiResp = await apiCall('user/signin', 'post', formData);
+
+		if (apiResp.statusCode === 200) {
+			const extractedToken = extractEncryptedToken(apiResp.jwt);
+			const userDetails = {
+				...apiResp.details,
+				email: extractedToken?.email,
+			};
+
+			localStorage.setItem('user_details', JSON.stringify(userDetails));
+			localStorage.setItem('JWT_token', apiResp.jwt);
+			localStorage.setItem('login_info', apiResp.loginInfo);
+			document.location.href = '/user-dashboard';
+		} else {
+			handleMsgShown(apiResp.msg, 'error');
+		}
+	}, []);
 	return (
 		<div id="UserLogin">
 			<div className="container">
 				<h1>Login</h1>
-				<form id="login-form">
+				<form id="login-form" onSubmit={handleSubmit}>
 					<label htmlFor="email">Email</label>
 					<input type="email" id="email" name="email" required placeholder="Enter your email" />
 
@@ -26,6 +64,7 @@ const UserLogin = () => {
 					<NavLink to="/register">Don't have an account? Sign up</NavLink>
 				</div>
 			</div>
+			{msg && <ShowMsg msgText={msg?.text} type={msg?.type} />}
 		</div>
 	);
 };
