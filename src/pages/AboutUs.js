@@ -5,8 +5,8 @@ const AboutUs = () => {
 	return (
 		<div id="aboutUs">
 			<h1>ABOUT US</h1>
-			<div class="content">
-				<div class="text">
+			<div className="content">
+				<div className="text">
 					<p>
 						At Niraksh, we offer a real-time prediction system that enables patients and bystanders to
 						quickly locate available hospital beds.
@@ -21,7 +21,7 @@ const AboutUs = () => {
 						for every patient.
 					</p>
 				</div>
-				<div class="image">
+				<div className="image">
 					<img src="healthcare-illustration.jpg" alt="Healthcare Illustration" />
 				</div>
 			</div>

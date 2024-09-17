@@ -133,20 +133,14 @@ const HospitalRegPage = () => {
 				toSend = { ...toSend, [key]: value };
 			}
 
-			console.log(toSend);
-
-			console.log('Selected Departments:', selectedDepartments);
-			console.log('Selected Facilities:', selectedFacilities);
-
 			const apiResp = await apiCall('hospital/signup', 'post', {
 				...toSend,
 				departmentsAvailable: selectedDepartments,
 				facilitiesAvailable: selectedFacilities,
 			});
-			console.log(apiResp.status);
 
 			if (apiResp.statusCode === 200) {
-				document.location.href = '/hospital-registration';
+				document.location.href = '/hospital-login';
 			} else {
 				handleMsgShown(apiResp.msg, 'error');
 			}

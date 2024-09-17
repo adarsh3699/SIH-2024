@@ -12,6 +12,9 @@ const texts = ["Book your Doctor's appointment", 'Get expert medical care today'
 const typingSpeed = 100;
 const deletingSpeed = 50;
 const pauseTime = 2000;
+const userLoggedIn = JSON.parse(localStorage.getItem('user_details'));
+
+console.log(userLoggedIn);
 
 function HomePage() {
 	const [textIndex, setTextIndex] = useState(0);

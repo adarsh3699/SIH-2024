@@ -116,7 +116,7 @@ const HospitalSearch = () => {
 	};
 
 	return (
-		<div className="App">
+		<div id="hospitalSearch">
 			<header>
 				<h1>Hospital Search</h1>
 			</header>
