@@ -1,6 +1,5 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import Niraksh from '../imgs/WellCare-removebg-preview.png';
 import '../styles/userForgetPass.css';
 
 const UserForgetPass = () => {
