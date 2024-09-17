@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 import '../styles/userLogin.css';
 
@@ -22,8 +23,8 @@ const UserLogin = () => {
 					Continue with Google
 				</button>
 				<div className="links">
-					<a href="#">Forgot password?</a>
-					<a href="#">Don't have an account? Sign up</a>
+					<NavLink to="/forgot-password">Forgot password?</NavLink>
+					<NavLink to="/register">Don't have an account? Sign up</NavLink>
 				</div>
 			</div>
 		</div>

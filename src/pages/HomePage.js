@@ -47,16 +47,18 @@ function App() {
 					<img src={Wellcare} alt="Logo" />
 				</div>
 				<div className="nav-links">
-					<a href="#">Main</a>
-					<a href="#">About</a>
-					<a href="#">Contact Us</a>
-					<a href="#">Help</a>
+					<a href="/">Main</a>
+					<a href="/">About</a>
+					<a href="/">Contact Us</a>
+					<a href="/">Help</a>
 				</div>
 			</nav>
 			<div className="container">
 				<div className="main-content">
 					<div className="text-content">
-						<h1>Every <span className= "emergency-call">emergency call</span> is a call for hope and help</h1>
+						<h1>
+							Every <span className="emergency-call">emergency call</span> is a call for hope and help
+						</h1>
 						<p id="typing-text">{displayText}</p>
 						<p>Quick, easy, and convenient.</p>
 						<div className="buttons">
