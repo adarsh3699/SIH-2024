@@ -1,4 +1,4 @@
-body {
+#userSignup {
 	font-family: Arial, sans-serif;
 	/* background-image:; */
 	background-size: cover;
@@ -6,7 +6,7 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	height: 100vh;
+	height: calc(100vh - 100px);
 	margin: 0;
 }
 .logo {

@@ -25,22 +25,21 @@ const UserSignup = () => {
 	};
 
 	return (
-		<div>
-			<img src="/placeholder.svg?height=50&width=50" alt="Logo" class="logo" />
-			<div class="container">
+		<div id="userSignup">
+			<div className="container">
 				<h1>Create an account</h1>
 				<form id="signup-form">
-					<label for="email">Email</label>
+					<label htmlFor="email">Email</label>
 					<input type="email" id="email" name="email" required placeholder="Enter email" />
 
-					<label for="username">Name</label>
+					<label htmlFor="username">Name</label>
 					<input type="text" id="username" name="username" required placeholder="Enter name" />
 
-					<label for="password">Set Password</label>
+					<label htmlFor="password">Set Password</label>
 					<input type="password" id="password" name="password" required placeholder="Enter password" />
 
 					<label>Sex</label>
-					<div class="gender-group">
+					<div className="gender-group">
 						<label>
 							<input type="radio" id="male" name="gender" value="male" required />
 							Male
@@ -53,11 +52,11 @@ const UserSignup = () => {
 
 					<button type="submit">Continue</button>
 				</form>
-				<button class="google-btn">
+				<button className="google-btn">
 					<img src="/placeholder.svg?height=20&width=20" alt="Google" width="20px" />
 					Continue with Google
 				</button>
-				<div class="login-link">
+				<div className="login-link">
 					<NavLink to="/login">Already have an account? Log in</NavLink>
 				</div>
 			</div>
