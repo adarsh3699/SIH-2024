@@ -104,7 +104,7 @@ const UserSignup = () => {
 					<button type="submit">Continue</button>
 				</form>
 				<button className="google-btn">
-					<img src="/placeholder.svg?height=20&width=20" alt="Google" width="20px" />
+					<img src="https://www.freepnglogos.com/uploads/google-logo-png/google-logo-icon-png-transparent-background-osteopathy-16.png" alt="Google" width="20px" />
 					Continue with Google
 				</button>
 				<div className="login-link">
