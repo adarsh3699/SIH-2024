@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import '../styles/homePage.css';
+import Wellcare from '../imgs/WellCare-removebg-preview.png';
+import professional from '../imgs/doctor-nurses-special-equipment.png';
 
 const texts = ["Book your Doctor's appointment", 'Get expert medical care today'];
 const typingSpeed = 100;
@@ -42,8 +44,8 @@ function App() {
 		<>
 			<nav>
 				<div className="logo">
-					<img src="/placeholder.svg?height=50&width=50" alt="Logo" />
-					<span>मित्र</span>
+					<img src={Wellcare} alt="Logo" />
+					<span>Niraksh</span>
 				</div>
 				<div className="nav-links">
 					<a href="#">Main</a>
@@ -64,7 +66,7 @@ function App() {
 						</div>
 					</div>
 					<div className="image-content">
-						<img src="/placeholder.svg?height=400&width=600" alt="Medical professionals" />
+						<img src={professional} alt="Medical professionals" />
 					</div>
 				</div>
 			</div>
