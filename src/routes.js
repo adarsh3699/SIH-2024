@@ -12,6 +12,7 @@ const HospitalSearch = lazy(() => import('./pages/HospitalSearch'));
 const PatientPortal = lazy(() => import('./pages/PatientPortal'));
 const UserLogin = lazy(() => import('./pages/UserLogin'));
 const UserSignup = lazy(() => import('./pages/UserSignup'));
+const UserForgetPass = lazy(() => import('./pages/UserForgetPass'));
 
 function Routes() {
 	return (
@@ -32,6 +33,7 @@ function Routes() {
 				<Route exact path="/patient-portal" element={<PatientPortal />} />
 				<Route exact path="/login" element={<UserLogin />} />
 				<Route exact path="/register" element={<UserSignup />} />
+				<Route exact path="/forgot-password" element={<UserForgetPass />} />
 
 				<Route
 					path="*"

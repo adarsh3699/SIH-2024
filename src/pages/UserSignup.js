@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 
 import '../styles/userSignup.css';
+import { NavLink } from 'react-router-dom';
 
 const UserSignup = () => {
 	const [formData, setFormData] = useState({
@@ -57,7 +58,7 @@ const UserSignup = () => {
 					Continue with Google
 				</button>
 				<div class="login-link">
-					<a href="#">Already have an account? Log in</a>
+					<NavLink to="/login">Already have an account? Log in</NavLink>
 				</div>
 			</div>
 		</div>
