@@ -45,7 +45,6 @@ function App() {
 			<nav>
 				<div className="logo">
 					<img src={Wellcare} alt="Logo" />
-					<span>Niraksh</span>
 				</div>
 				<div className="nav-links">
 					<a href="#">Main</a>
