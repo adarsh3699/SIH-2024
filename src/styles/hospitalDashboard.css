@@ -1,4 +1,4 @@
-body {
+#HospitalDashboard {
 	font-family: Arial, sans-serif;
 	line-height: 1.6;
 	margin: 0;
@@ -6,53 +6,48 @@ body {
 	background-color: #dbf4ff;
 }
 
-.container {
-	max-width: 1200px;
-	margin: 0 auto;
-}
-
-h1 {
+#HospitalDashboard h1 {
 	text-align: center;
 	margin-bottom: 20px;
 }
 
-.dashboard {
+#HospitalDashboard .dashboard {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 	gap: 20px;
 }
 
-.card {
+#HospitalDashboard .card {
 	background-color: #84c4e0;
 	border-radius: 8px;
 	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 	padding: 20px;
 }
-.card3{
-		background-color: #fff;
-		border-radius: 8px;
-		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-		padding: 20px;
-		display: flex;
-		flex-direction: column;
-		justify-content: center; /* Vertically centers the content */
-		align-items: center; /* Horizontally centers the content */
-		 /* Ensure the card takes full height of its container */
-		text-align: center;
+#HospitalDashboard .card3 {
+	background-color: #fff;
+	border-radius: 8px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center; /* Vertically centers the content */
+	align-items: center; /* Horizontally centers the content */
+	/* Ensure the card takes full height of its container */
+	text-align: center;
 }
 
-.card3 h2{
-	margin: 0
+#HospitalDashboard .card3 h2 {
+	margin: 0;
 }
 
-.card h2 {
+#HospitalDashboard .card h2 {
 	margin-top: 0;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 }
 
-.badge {
+#HospitalDashboard .badge {
 	background-color: #141414e6;
 	color: #fff;
 	padding: 5px 10px;
@@ -60,12 +55,12 @@ h1 {
 	font-size: 0.8em;
 }
 
-ul {
+#HospitalDashboard ul {
 	list-style-type: none;
 	padding: 0;
 }
 
-li {
+#HospitalDashboard li {
 	margin-bottom: 10px;
 	padding: 10px;
 	background-color: #f9f9f9;
@@ -73,11 +68,11 @@ li {
 	cursor: pointer;
 }
 
-li:hover {
+#HospitalDashboard li:hover {
 	background-color: #e9e9e9;
 }
 
-.modal {
+#HospitalDashboard .modal {
 	position: fixed;
 	z-index: 1;
 	left: 0;
@@ -88,7 +83,7 @@ li:hover {
 	background-color: rgba(0, 0, 0, 0.4);
 }
 
-.modal-content {
+#HospitalDashboard .modal-content {
 	background-color: #fefefe;
 	margin: 15% auto;
 	padding: 20px;
@@ -98,7 +93,7 @@ li:hover {
 	border-radius: 8px;
 }
 
-.close {
+#HospitalDashboard .close {
 	color: #aaa;
 	float: right;
 	font-size: 28px;
@@ -106,14 +101,14 @@ li:hover {
 	cursor: pointer;
 }
 
-.close:hover,
-.close:focus {
+#HospitalDashboard .close:hover,
+#HospitalDashboard .close:focus {
 	color: #000;
 	text-decoration: none;
 	cursor: pointer;
 }
 
-button {
+#HospitalDashboard button {
 	background-color: #4caf50;
 	border: none;
 	color: white;
@@ -127,12 +122,12 @@ button {
 	border-radius: 4px;
 }
 
-button:hover {
+#HospitalDashboard button:hover {
 	background-color: #45a049;
 }
 
-input[type='text'],
-input[type='date'] {
+#HospitalDashboard input[type='text'],
+#HospitalDashboard input[type='date'] {
 	width: 100%;
 	padding: 12px 20px;
 	margin: 8px 0;

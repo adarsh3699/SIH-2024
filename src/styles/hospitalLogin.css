@@ -9,28 +9,22 @@
 	height: 100vh;
 	margin: 0;
 }
-.logo {
-	position: absolute;
-	top: 20px;
-	left: 20px;
-	width: 60px;
-	height: 60px;
-}
-.container {
+
+.hospitalLogin_container {
 	background-color: rgba(255, 255, 255, 0.9);
 	padding: 30px;
 	border-radius: 30px;
 	box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 	width: 320px;
 }
-h1 {
+#HospitalLogin h1 {
 	text-align: center;
 	color: #2c3e50;
 	font-size: 1.8em;
 	margin-bottom: 20px;
 }
-input[type='text'],
-input[type='password'] {
+#HospitalLogin input[type='text'],
+#HospitalLogin input[type='password'] {
 	width: 100%;
 	padding: 10px;
 	margin: 10px 0;
@@ -39,13 +33,13 @@ input[type='password'] {
 	box-sizing: border-box;
 	font-size: 16px;
 }
-label {
+#HospitalLogin label {
 	display: block;
 	margin-top: 10px;
 	color: #34495e;
 	font-size: 0.9em;
 }
-button {
+#HospitalLogin button {
 	width: 100%;
 	padding: 12px;
 	background-color: #3498db;
@@ -57,24 +51,24 @@ button {
 	font-size: 16px;
 	transition: background-color 0.3s;
 }
-button:hover {
+#HospitalLogin button:hover {
 	background-color: #2980b9;
 }
-.links {
+#HospitalLogin .links {
 	text-align: center;
 	margin-top: 20px;
 	font-size: 0.9em;
 }
-.links a {
+#HospitalLogin .links a {
 	color: #3498db;
 	text-decoration: none;
 	display: block;
 	margin-top: 10px;
 }
-.links a:hover {
+#HospitalLogin .links a:hover {
 	text-decoration: underline;
 }
-.role-select {
+#HospitalLogin .role-select {
 	width: 100%;
 	padding: 10px;
 	margin: 10px 0;

@@ -7,13 +7,14 @@ nav {
 	font-size: 20px;
 	position: sticky;
 	top: 0;
+	background: #a9d9ee;
 }
-.logo {
+.nav-logo {
 	display: flex;
 
 	align-items: center;
 }
-.logo img {
+.nav-logo img {
 	width: 80px;
 	height: 80px;
 }

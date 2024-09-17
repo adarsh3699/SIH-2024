@@ -1,10 +1,10 @@
-body {
+#hospitalRegPage {
 	font-family: Arial, sans-serif;
 	background-color: #dbf4ff;
 	margin: 0;
 	padding: 20px;
 }
-.container {
+#hospitalRegPage .container {
 	max-width: 1000px;
 	margin: 0 auto;
 	background-color: white;
@@ -12,47 +12,47 @@ body {
 	border-radius: 8px;
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-.header {
+#hospitalRegPage .header {
 	display: flex;
 	align-items: center;
 	margin-bottom: 20px;
 }
-.header img {
+#hospitalRegPage .header img {
 	width: 50px;
 	height: 50px;
 	margin-right: 10px;
 }
-h1 {
+#hospitalRegPage h1 {
 	color: #333;
 	margin: 0;
 }
-.form-row {
+#hospitalRegPage .form-row {
 	display: flex;
 	justify-content: space-between;
 	margin-bottom: 15px;
 }
-.form-group {
+#hospitalRegPage .form-group {
 	width: 48%;
 }
-label {
+#hospitalRegPage label {
 	display: block;
 	margin-bottom: 5px;
 	font-weight: bold;
 }
-input[type='text'],
-input[type='url'],
-input[type='tel'],
-input[type='email'],
-input[type='password'],
-input[type='number'],
-select {
+#hospitalRegPage input[type='text'],
+#hospitalRegPage input[type='url'],
+#hospitalRegPage input[type='tel'],
+#hospitalRegPage input[type='email'],
+#hospitalRegPage input[type='password'],
+#hospitalRegPage input[type='number'],
+#hospitalRegPage select {
 	width: 100%;
 	padding: 8px;
 	border: 1px solid #ddd;
 	border-radius: 4px;
 	box-sizing: border-box;
 }
-.dropdown-check-list {
+#hospitalRegPage .dropdown-check-list {
 	display: inline-block;
 	width: 100%;
 }
@@ -79,7 +79,7 @@ select {
 .dropdown-check-list .anchor:active:after {
 	transform: rotate(-45deg);
 }
-.dropdown-check-list ul.items {
+#hospitalRegPage .dropdown-check-list ul.items {
 	padding: 2px;
 	margin: 0;
 	border: 1px solid #ddd;
@@ -87,21 +87,21 @@ select {
 	max-height: 200px;
 	overflow-y: auto;
 }
-.dropdown-check-list ul.items li {
+#hospitalRegPage .dropdown-check-list ul.items li {
 	list-style: none;
 }
-.dropdown-check-list.visible .anchor {
+#hospitalRegPage .dropdown-check-list.visible .anchor {
 	color: #0094ff;
 }
-.dropdown-check-list.visible .items {
+#hospitalRegPage .dropdown-check-list.visible .items {
 	display: block;
 }
-.errorMsg {
+#hospitalRegPage .errorMsg {
 	color: red;
 	font-size: 0.9em;
 	margin-top: 5px;
 }
-button {
+#hospitalRegPage button {
 	background-color: #448e94;
 	color: white;
 	padding: 10px 15px;
@@ -111,6 +111,6 @@ button {
 	font-size: 16px;
 	width: 100%;
 }
-button:hover {
+#hospitalRegPage button:hover {
 	background-color: #4a9e94;
 }

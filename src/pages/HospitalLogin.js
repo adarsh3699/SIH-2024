@@ -1,15 +1,15 @@
 import React from 'react';
 
 import '../styles/hospitalLogin.css';
+import { NavLink } from 'react-router-dom';
 
 const HospitalLogin = () => {
 	return (
 		<div id="HospitalLogin">
-			<img src="/placeholder.svg?height=60&width=60" alt="Hospital Logo" class="logo" />
-			<div class="container">
+			<div className="hospitalLogin_container">
 				<h1>Hospital Login</h1>
 				<form id="login-form">
-					<label for="username">Username or Email</label>
+					<label htmlFor="username">Username</label>
 					<input
 						type="text"
 						id="username"
@@ -18,23 +18,14 @@ const HospitalLogin = () => {
 						placeholder="Enter your username or email"
 					/>
 
-					<label for="password">Password</label>
+					<label htmlFor="password">Password</label>
 					<input type="password" id="password" name="password" required placeholder="Enter your password" />
-
-					<label for="role">Role</label>
-					<select id="role" name="role" class="role-select" required>
-						<option value="">Select your role</option>
-						<option value="doctor">Doctor</option>
-						<option value="nurse">Nurse</option>
-						<option value="admin">Administrator</option>
-						<option value="patient">Patient</option>
-					</select>
 
 					<button type="submit">Login</button>
 				</form>
-				<div class="links">
-					<a href="#">Forgot password?</a>
-					<a href="#">New patient? Register here</a>
+				<div className="links">
+					<NavLink to="#">Forgot password?</NavLink>
+					<NavLink to="/hospital-registration">New Hospital? Register here</NavLink>
 				</div>
 			</div>
 		</div>

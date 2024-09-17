@@ -1,6 +1,7 @@
 import React, { Suspense, lazy } from 'react';
 import { Navigate, Routes as Switch, Route } from 'react-router-dom';
 import Loader from './components/loader/Loader';
+import NabBar from './components/nabBar/NabBar';
 
 // const LoginPage = lazy(() => import('./pages/LoginPage'));
 // const ForgetPasswordPage = lazy(() => import('./pages/ForgetPasswordPage'));
@@ -26,16 +27,97 @@ function Routes() {
 			}
 		>
 			<Switch>
-				<Route exact path="/" element={<HomePage />} />
+				<Route
+					exact
+					path="/"
+					element={
+						<>
+							<NabBar />
+							<HomePage />
+						</>
+					}
+				/>
 				<Route exact path="/home" element={<Navigate to="/" />} />
-				<Route exact path="/hospital-login" element={<HospitalLogin />} />
-				<Route exact path="/hospital-registration" element={<HospitalRegPage />} />
-				<Route exact path="/hospital-dashboard" element={<HospitalDashboard />} />
-				<Route exact path="/hospital-search" element={<HospitalSearch />} />
-				<Route exact path="/patient-portal" element={<PatientPortal />} />
-				<Route exact path="/login" element={<UserLogin />} />
-				<Route exact path="/register" element={<UserSignup />} />
-				<Route exact path="/forgot-password" element={<UserForgetPass />} />
+				<Route
+					exact
+					path="/hospital-login"
+					element={
+						<>
+							<NabBar />
+							<HospitalLogin />
+						</>
+					}
+				/>
+				<Route
+					exact
+					path="/hospital-registration"
+					element={
+						<>
+							<NabBar />
+							<HospitalRegPage />
+						</>
+					}
+				/>
+				<Route
+					exact
+					path="/hospital-dashboard"
+					element={
+						<>
+							<NabBar />
+							<HospitalDashboard />
+						</>
+					}
+				/>
+				<Route
+					exact
+					path="/hospital-search"
+					element={
+						<>
+							<NabBar />
+							<HospitalSearch />
+						</>
+					}
+				/>
+				<Route
+					exact
+					path="/patient-portal"
+					element={
+						<>
+							<NabBar />
+							<PatientPortal />
+						</>
+					}
+				/>
+				<Route
+					exact
+					path="/login"
+					element={
+						<>
+							<NabBar />
+							<UserLogin />
+						</>
+					}
+				/>
+				<Route
+					exact
+					path="/register"
+					element={
+						<>
+							<NabBar />
+							<UserSignup />
+						</>
+					}
+				/>
+				<Route
+					exact
+					path="/forgot-password"
+					element={
+						<>
+							<NabBar />
+							<UserForgetPass />
+						</>
+					}
+				/>
 
 				<Route
 					path="*"

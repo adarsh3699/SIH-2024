@@ -7,7 +7,7 @@ import { NavLink } from 'react-router-dom';
 const NabBar = () => {
 	return (
 		<nav>
-			<div className="logo">
+			<div className="nav-logo">
 				<img src={Wellcare} alt="Logo" />
 			</div>
 			<div className="nav-links">

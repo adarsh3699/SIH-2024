@@ -86,7 +86,7 @@ const HospitalDashboard = () => {
 	};
 
 	return (
-		<div className="container">
+		<div id="HospitalDashboard">
 			<h1>Hospital Dashboard</h1>
 			<div className="dashboard">
 				<div className="card">
@@ -117,7 +117,16 @@ const HospitalDashboard = () => {
 
 				<div className="card3" onClick={openRequestModal}>
 					<h2>Requests</h2>
-					<div style={{ fontSize: '2em', textAlign: 'center', fontWeight:"bold", color: "rgb(255,86,87,255)" }}>{requests.length}</div>
+					<div
+						style={{
+							fontSize: '2em',
+							textAlign: 'center',
+							fontWeight: 'bold',
+							color: 'rgb(255,86,87,255)',
+						}}
+					>
+						{requests.length}
+					</div>
 					<div style={{ textAlign: 'center' }}>Pending Requests</div>
 				</div>
 			</div>

@@ -4,7 +4,7 @@ body {
 	padding: 0;
 	background-color: #b3e0ff;
 }
-.container {
+#homePage {
 	max-width: 1200px;
 	margin: 0 auto;
 	padding: 20px;
@@ -46,6 +46,7 @@ p {
 	display: flex;
 	align-items: center;
 	justify-content: space-around;
+	text-decoration: unset;
 }
 .btn-hospital {
 	background-color: #448e94;

@@ -6,7 +6,6 @@ import professional from '../imgs/doctor-nurses-special-equipment.png';
 import hospitalLogo from '../imgs/hospitalLogo.svg';
 import userLogo from '../imgs/userLogo.svg';
 
-import NabBar from '../components/nabBar/NabBar';
 import { NavLink } from 'react-router-dom';
 
 const texts = ["Book your Doctor's appointment", 'Get expert medical care today'];
@@ -14,7 +13,7 @@ const typingSpeed = 100;
 const deletingSpeed = 50;
 const pauseTime = 2000;
 
-function App() {
+function HomePage() {
 	const [textIndex, setTextIndex] = useState(0);
 	const [charIndex, setCharIndex] = useState(0);
 	const [isDeleting, setIsDeleting] = useState(false);
@@ -47,34 +46,31 @@ function App() {
 	}, [charIndex, isDeleting, textIndex]);
 
 	return (
-		<>
-			<NabBar />
-			<div className="container">
-				<div className="main-content">
-					<div className="text-content">
-						<h1>
-							Every <span className="emergency-call">emergency call</span> is a call for hope and help
-						</h1>
-						<p id="typing-text">{displayText}</p>
-						<p>Quick, easy, and convenient.</p>
-						<div className="buttons">
-							<button className="btn btn-hospital">
-								HOSPITAL
-								<img src={hospitalLogo} alt="" />
-							</button>
-							<button className="btn btn-user">
-								USER
-								<img src={userLogo} alt="" />
-							</button>
-						</div>
-					</div>
-					<div className="image-content">
-						<img src={professional} alt="Medical professionals" />
+		<div id="homePage">
+			<div className="main-content">
+				<div className="text-content">
+					<h1>
+						Every <span className="emergency-call">emergency call</span> is a call for hope and help
+					</h1>
+					<p id="typing-text">{displayText}</p>
+					<p>Quick, easy, and convenient.</p>
+					<div className="buttons">
+						<NavLink className="btn btn-hospital" to="/hospital-login">
+							HOSPITAL
+							<img src={hospitalLogo} alt="" />
+						</NavLink>
+						<NavLink className="btn btn-user" to="login">
+							USER
+							<img src={userLogo} alt="" />
+						</NavLink>
 					</div>
 				</div>
+				<div className="image-content">
+					<img src={professional} alt="Medical professionals" />
+				</div>
 			</div>
-		</>
+		</div>
 	);
 }
 
-export default App;
+export default HomePage;
