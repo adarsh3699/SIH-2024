@@ -1,26 +1,28 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 
-import '../styles/homePage.css';
+import "../styles/homePage.css";
 
-import professional from '../imgs/doctor-nurses-special-equipment.png';
-import hospitalLogo from '../imgs/hospitalLogo.svg';
-import userLogo from '../imgs/userLogo.svg';
+import professional from "../imgs/doctor-nurses-special-equipment.png";
+import hospitalLogo from "../imgs/hospitalLogo.svg";
+import userLogo from "../imgs/userLogo.svg";
 
-import { NavLink } from 'react-router-dom';
+import { NavLink } from "react-router-dom";
+import { extractEncryptedToken } from "../utils";
 
-const texts = ["Book your Doctor's appointment", 'Get expert medical care today'];
+const texts = ["Book your Doctor's appointment", "Get expert medical care today"];
 const typingSpeed = 100;
 const deletingSpeed = 50;
 const pauseTime = 2000;
-const userLoggedIn = JSON.parse(localStorage.getItem('user_details'));
 
-console.log(userLoggedIn);
+const userLoggedIn = localStorage?.getItem("JWT_token");
+
+const userType = extractEncryptedToken(userLoggedIn)?.type;
 
 function HomePage() {
 	const [textIndex, setTextIndex] = useState(0);
 	const [charIndex, setCharIndex] = useState(0);
 	const [isDeleting, setIsDeleting] = useState(false);
-	const [displayText, setDisplayText] = useState('');
+	const [displayText, setDisplayText] = useState("");
 
 	useEffect(() => {
 		const currentText = texts[textIndex];
@@ -58,11 +60,14 @@ function HomePage() {
 					<p id="typing-text">{displayText}</p>
 					<p>Quick, easy, and convenient.</p>
 					<div className="buttons">
-						<NavLink className="btn btn-hospital" to="/hospital-login">
+						<NavLink
+							className="btn btn-hospital"
+							to={userType === "hospital" ? "/hospital-dashboard" : "/hospital-login"}
+						>
 							HOSPITAL
 							<img src={hospitalLogo} alt="" />
 						</NavLink>
-						<NavLink className="btn btn-user" to="login">
+						<NavLink className="btn btn-user" to={userType === "user" ? "/user-dashboard" : "/login"}>
 							USER
 							<img src={userLogo} alt="" />
 						</NavLink>

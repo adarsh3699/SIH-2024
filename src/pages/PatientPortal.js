@@ -1,6 +1,6 @@
-import React from 'react';
-import '../styles/patientPortal.css';
-import { NavLink } from 'react-router-dom';
+import React from "react";
+import "../styles/patientPortal.css";
+import { NavLink } from "react-router-dom";
 
 const PatientPortal = () => {
 	return (
@@ -27,7 +27,7 @@ const PatientPortal = () => {
 							<path d="M8 16v-4"></path>
 							<path d="M16 16v-4"></path>
 						</svg>
-						View Hospital List
+						OPD Appointment
 					</NavLink>
 					<NavLink className="button button-secondary">
 						<svg
@@ -45,7 +45,7 @@ const PatientPortal = () => {
 							<path d="M12 8v8"></path>
 							<path d="M8 12h8"></path>
 						</svg>
-						Fill Patient Form
+						Fill Emergency Form
 					</NavLink>
 				</div>
 			</div>
