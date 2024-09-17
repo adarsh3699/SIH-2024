@@ -3,11 +3,11 @@ import '../styles/patientPortal.css';
 
 const PatientPortal = () => {
 	return (
-		<div class="card">
+		<div className="card">
 			<h1>Patient Portal</h1>
 			<p>Choose an option to proceed with your appointment</p>
-			<div class="button-container">
-				<button class="button button-primary" onclick="navigateTo('/hospital-list')">
+			<div className="button-container">
+				<button className="button button-primary" onClick="navigateTo('/hospital-list')">
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
 						width="24"
@@ -15,9 +15,9 @@ const PatientPortal = () => {
 						viewBox="0 0 24 24"
 						fill="none"
 						stroke="currentColor"
-						stroke-width="2"
-						stroke-linecap="round"
-						stroke-linejoin="round"
+						strokeWidth="2"
+						strokeLinecap="round"
+						strokeLinejoin="round"
 					>
 						<path d="M19 10V6a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v4"></path>
 						<path d="M1 10v8a2 2 0 0 0 2 2h18a2 2 0 0 0 2-2v-8"></path>
@@ -27,7 +27,7 @@ const PatientPortal = () => {
 					</svg>
 					View Hospital List
 				</button>
-				<button class="button button-secondary" onclick="navigateTo('/patient-form')">
+				<button className="button button-secondary" onClick="navigateTo('/patient-form')">
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
 						width="24"
@@ -35,9 +35,9 @@ const PatientPortal = () => {
 						viewBox="0 0 24 24"
 						fill="none"
 						stroke="currentColor"
-						stroke-width="2"
-						stroke-linecap="round"
-						stroke-linejoin="round"
+						strokeWidth="2"
+						strokeLinecap="round"
+						strokeLinejoin="round"
 					>
 						<rect x="3" y="3" width="18" height="18" rx="2"></rect>
 						<path d="M12 8v8"></path>
