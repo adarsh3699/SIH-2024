@@ -9,6 +9,10 @@ body {
 	margin: 0 auto;
 	padding: 20px;
 }
+.emergency-call{
+	color: rgb(255,86,87,255);
+	font-weight: bold;
+}
 nav {
 	display: flex;
 	justify-content: space-between;
