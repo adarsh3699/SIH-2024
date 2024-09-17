@@ -115,9 +115,9 @@ const HospitalDashboard = () => {
 					</ul>
 				</div>
 
-				<div className="card" onClick={openRequestModal}>
+				<div className="card3" onClick={openRequestModal}>
 					<h2>Requests</h2>
-					<div style={{ fontSize: '2em', textAlign: 'center' }}>{requests.length}</div>
+					<div style={{ fontSize: '2em', textAlign: 'center', fontWeight:"bold", color: "rgb(255,86,87,255)" }}>{requests.length}</div>
 					<div style={{ textAlign: 'center' }}>Pending Requests</div>
 				</div>
 			</div>
