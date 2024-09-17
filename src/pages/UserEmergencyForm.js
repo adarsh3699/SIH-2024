@@ -3,74 +3,96 @@ import "../styles/userEmergencyForm.css";
 
 const UserEmergencyForm = () => {
 	return (
-		<div id="UserEmergencyForm">
-			<div className="container">
-				<img
-					src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MCIgaGVpZ2h0PSI1MCIgdmlld0JveD0iMCAwIDUwIDUwIj48cmVjdCB3aWR0aD0iNTAiIGhlaWdodD0iNTAiIGZpbGw9IiMyYzdhN2IiLz48cGF0aCBkPSJNMjUgMTBDMTYuNzE2IDEwIDEwIDE2LjcxNiAxMCAyNUMxMCAzMy4yODQgMTYuNzE2IDQwIDI1IDQwQzMzLjI4NCA0MCA0MCAzMy4yODQgNDAgMjVDNDAgMTYuNzE2IDMzLjI4NCAxMCAyNSAxMFpNMjIgMzBWMjBIMjhWMzBIMjJaIiBmaWxsPSJ3aGl0ZSIvPjwvc3ZnPg=="
-					alt="Logo"
-					className="logo"
-				/>
-				<h1>Emergency</h1>
-				<h2>Patient Form</h2>
-				<p>Please fill out the form below to provide information about the emergency patient.</p>
-				<form id="emergencyForm">
-					<div className="form-content">
-						<div className="form-fields">
-							<div className="form-group">
-								<label htmlFor="name">Name</label>
-								<input type="text" id="name" placeholder="Optional" />
-							</div>
-							<div className="form-group">
-								<label htmlFor="age">Age</label>
-								<input type="number" id="age" placeholder="Optional" />
-							</div>
-							<div className="form-group">
-								<label htmlFor="gender">Gender</label>
-								<input type="text" id="gender" placeholder="M/F" />
-							</div>
-							<div className="form-group">
-								<label htmlFor="location">Location</label>
-								<div className="location-input">
-									<svg
-										className="location-icon"
-										xmlns="http://www.w3.org/2000/svg"
-										viewBox="0 0 24 24"
-										fill="none"
-										stroke="currentColor"
-										strokeWidth="2"
+		<div id="userEmergencyForm">
+			<div className="header">
+				<svg className="logo" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<rect width="50" height="50" fill="#2c7a7b" />
+					<path
+						d="M25 10C16.716 10 10 16.716 10 25C10 33.284 16.716 40 25 40C33.284 40 40 33.284 40 25C40 16.716 33.284 10 25 10ZM22 30V20H28V30H22Z"
+						fill="white"
+					/>
+				</svg>
+				<div>
+					<h1>Emergency</h1>
+					<h2>Patient Form</h2>
+				</div>
+			</div>
+			<p className="description">
+				Please fill out the form below to provide information about the emergency patient.
+			</p>
+			<form id="emergencyForm">
+				<div className="form-content">
+					<div className="form-fields">
+						<div className="form-group">
+							<label htmlFor="name">Name</label>
+							<input id="name" placeholder="Optional" />
+						</div>
+						<div className="form-group">
+							<label htmlFor="age">Age</label>
+							<input id="age" type="number" placeholder="Optional" />
+						</div>
+						<div className="form-group">
+							<label htmlFor="gender">Gender</label>
+							<input id="gender" placeholder="M/F" />
+						</div>
+						<div className="form-group">
+							<label htmlFor="location">Location</label>
+							<div className="location-input">
+								<svg
+									className="location-icon"
+									xmlns="http://www.w3.org/2000/svg"
+									fill="none"
+									viewBox="0 0 24 24"
+									stroke="currentColor"
+								>
+									<path
 										strokeLinecap="round"
 										strokeLinejoin="round"
-									>
-										<path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-										<circle cx="12" cy="10" r="3"></circle>
-									</svg>
-									<input
-										type="text"
-										id="location"
-										placeholder="Click to get current location"
-										readOnly
+										strokeWidth="2"
+										d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
 									/>
-								</div>
+									<path
+										strokeLinecap="round"
+										strokeLinejoin="round"
+										strokeWidth="2"
+										d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+									/>
+								</svg>
+								<input id="location" placeholder="Click to get current location" readOnly />
 							</div>
 						</div>
-						<div className="image-upload" id="imageUpload">
-							<img
-								src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MCIgaGVpZ2h0PSI1MCIgdmlld0JveD0iMCAwIDUwIDUwIj48cmVjdCB3aWR0aD0iNTAiIGhlaWdodD0iNTAiIGZpbGw9Im5vbmUiLz48cGF0aCBkPSJNMjAgMTVIMzBDMzIuNzYxNCAxNSAzNSAxNy4yMzg2IDM1IDIwVjMwQzM1IDMyLjc2MTQgMzIuNzYxNCAzNSAzMCAzNUgyMEMxNy4yMzg2IDM1IDE1IDMyLjc2MTQgMTUgMzBWMjBDMTUgMTcuMjM4NiAxNy4yMzg2IDE1IDIwIDE1Wk0yNSAzMEMyNy43NjE0IDMwIDMwIDI3Ljc2MTQgMzAgMjVDMzAgMjIuMjM4NiAyNy43NjE0IDIwIDI1IDIwQzIyLjIzODYgMjAgMjAgMjIuMjM4NiAyMCAyNUMyMCAyNy43NjE0IDIyLjIzODYgMzAgMjUgMzBaIiBmaWxsPSIjMmM3YTdiIi8+PC9zdmc+"
-								alt="Camera Icon"
-								id="cameraIcon"
-							/>
-							<img
-								id="capturedImage"
-								alt=""
-								style={{ display: "none", maxWidth: "100%", maxHeight: "100%" }}
-							/>
+					</div>
+					<div className="image-upload" id="imageUpload">
+						<div>Please click a picture of the incident</div>
+						<div className="image-area">
+							<svg
+								className="camera-icon"
+								xmlns="http://www.w3.org/2000/svg"
+								fill="none"
+								viewBox="0 0 24 24"
+								stroke="currentColor"
+							>
+								<path
+									strokeLinecap="round"
+									strokeLinejoin="round"
+									strokeWidth="2"
+									d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"
+								/>
+								<path
+									strokeLinecap="round"
+									strokeLinejoin="round"
+									strokeWidth="2"
+									d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"
+								/>
+							</svg>
+							<img id="capturedImage" alt="Captured incident" style={{ display: "none" }} />
 						</div>
 					</div>
-					<button type="submit" className="start-btn">
-						START
-					</button>
-				</form>
-			</div>
+				</div>
+				<button type="submit" className="start-btn">
+					START
+				</button>
+			</form>
 		</div>
 	);
 };

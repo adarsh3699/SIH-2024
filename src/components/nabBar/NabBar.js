@@ -30,9 +30,9 @@ const NabBar = () => {
 	};
 	return (
 		<nav>
-			<div className="nav-logo">
+			<NavLink className="nav-logo" to="/">
 				<img src={Wellcare} alt="Logo" />
-			</div>
+			</NavLink>
 			<div className="nav-links">
 				<NavLink to="/">Main</NavLink>
 				<NavLink to="/about">About</NavLink>
