@@ -3,9 +3,6 @@ import { Navigate, Routes as Switch, Route } from 'react-router-dom';
 import Loader from './components/loader/Loader';
 import NabBar from './components/nabBar/NabBar';
 
-// const LoginPage = lazy(() => import('./pages/LoginPage'));
-// const ForgetPasswordPage = lazy(() => import('./pages/ForgetPasswordPage'));
-// const CreateAcc = lazy(() => import('./pages/CreateAcc'));
 const HomePage = lazy(() => import('./pages/HomePage'));
 const HospitalLogin = lazy(() => import('./pages/HospitalLogin'));
 const HospitalRegPage = lazy(() => import('./pages/HospitalRegPage'));
@@ -15,6 +12,8 @@ const PatientPortal = lazy(() => import('./pages/PatientPortal'));
 const UserLogin = lazy(() => import('./pages/UserLogin'));
 const UserSignup = lazy(() => import('./pages/UserSignup'));
 const UserForgetPass = lazy(() => import('./pages/UserForgetPass'));
+const AboutUs = lazy(() => import('./pages/AboutUs'));
+const ContactUs = lazy(() => import('./pages/ContactUs'));
 
 function Routes() {
 	return (
@@ -115,6 +114,27 @@ function Routes() {
 						<>
 							<NabBar />
 							<UserForgetPass />
+						</>
+					}
+				/>
+
+				<Route
+					exact
+					path="/about"
+					element={
+						<>
+							<NabBar />
+							<AboutUs />
+						</>
+					}
+				/>
+				<Route
+					exact
+					path="/contact"
+					element={
+						<>
+							<NabBar />
+							<ContactUs />
 						</>
 					}
 				/>

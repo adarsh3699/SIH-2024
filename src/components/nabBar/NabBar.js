@@ -12,8 +12,8 @@ const NabBar = () => {
 			</div>
 			<div className="nav-links">
 				<NavLink to="/">Main</NavLink>
-				<NavLink to="/">About</NavLink>
-				<NavLink to="/">Contact Us</NavLink>
+				<NavLink to="/about">About</NavLink>
+				<NavLink to="/contact">Contact Us</NavLink>
 				<NavLink to="/" className="nav_login">
 					Login
 				</NavLink>

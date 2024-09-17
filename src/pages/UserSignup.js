@@ -35,20 +35,10 @@ const UserSignup = () => {
 	const handleSubmit = useCallback(
 		async (e) => {
 			e.preventDefault();
-			console.log(formData);
 
 			const apiResp = await apiCall('user/signup', 'post', formData);
 
 			if (apiResp.statusCode === 200) {
-				// const extractedToken = extractEncryptedToken(apiResp.jwt);
-				// const userDetails = {
-				// 	...apiResp.details,
-				// 	email: extractedToken?.email,
-				// };
-
-				// localStorage.setItem('user_details', JSON.stringify(userDetails));
-				// localStorage.setItem('JWT_token', apiResp.jwt);
-				// localStorage.setItem('login_info', apiResp.loginInfo);
 				document.location.href = '/login';
 			} else {
 				handleMsgShown(apiResp.msg, 'error');
