@@ -202,7 +202,7 @@ const HospitalDashboard = () => {
 									<th>ID</th>
 									<th>Name</th>
 									<th>Sex</th>
-									<th>Age Range</th>
+									<th>Age</th>
 									<th>Severity</th>
 									<th>Action</th>
 								</tr>

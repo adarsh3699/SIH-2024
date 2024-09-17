@@ -11,7 +11,7 @@ const HospitalDashboard = lazy(() => import('./pages/HospitalDashboard'));
 const HospitalSearch = lazy(() => import('./pages/HospitalSearch'));
 const PatientPortal = lazy(() => import('./pages/PatientPortal'));
 const UserLogin = lazy(() => import('./pages/UserLogin'));
-// const SettingsPage = lazy(() => import('./pages/SettingsPage'));
+const UserSignup = lazy(() => import('./pages/UserSignup'));
 
 function Routes() {
 	return (
@@ -24,16 +24,14 @@ function Routes() {
 			}
 		>
 			<Switch>
-				{/*<Route exact path="/login" element={<LoginPage />} />
-				<Route exact path="/register" element={<CreateAcc />} />
-				<Route exact path="/forget-password" element={<ForgetPasswordPage />} /> */}
 				<Route exact path="/" element={<HomePage />} />
+				<Route exact path="/home" element={<Navigate to="/" />} />
 				<Route exact path="/hospital-registration" element={<HospitalRegPage />} />
 				<Route exact path="/hospital-dashboard" element={<HospitalDashboard />} />
 				<Route exact path="/hospital-search" element={<HospitalSearch />} />
 				<Route exact path="/patient-portal" element={<PatientPortal />} />
 				<Route exact path="/login" element={<UserLogin />} />
-				<Route exact path="/home" element={<Navigate to="/" />} />
+				<Route exact path="/register" element={<UserSignup />} />
 
 				<Route
 					path="*"
