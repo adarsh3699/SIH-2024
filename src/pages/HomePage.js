@@ -15,7 +15,6 @@ const deletingSpeed = 50;
 const pauseTime = 2000;
 
 const userLoggedIn = localStorage?.getItem("JWT_token");
-
 const userType = extractEncryptedToken(userLoggedIn)?.type;
 
 function HomePage() {

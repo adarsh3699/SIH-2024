@@ -1,36 +1,23 @@
 import { database } from "./initFirebase";
-import { encryptText, decryptText, USER_DETAILS } from "../utils";
-import { handleUserState } from "./auth";
 
-import {
-	collection,
-	onSnapshot,
-	addDoc,
-	deleteDoc,
-	updateDoc,
-	doc,
-	query,
-	where,
-	serverTimestamp,
-	orderBy,
-} from "firebase/firestore";
+import { collection, addDoc, serverTimestamp } from "firebase/firestore";
 
 // collection ref
 const colRef = collection(database, "emergencyPatient");
 
 //Add Notes
-function addNewNote(toSendNoteData, userId, setMsg, setIsApiLoading, isSharedNoteType) {
-	const { newNoteText, newNoteData } = toSendNoteData;
-	if (!userId || !newNoteText || !newNoteData) return setMsg("addNewNote: Please Provide all details");
+function addNewNote(toSendNoteData, userId, bookingId, setMsg, setIsApiLoading, isSharedNoteType) {
+	const { name, age, gender, location } = toSendNoteData;
+	if (!userId || !name || !gender || !age || !location) return setMsg("addNewNote: Please Provide all details");
 	setIsApiLoading(true);
-	const encryptNoteText = encryptText(newNoteText?.trim());
-	const encryptNoteData = encryptText(newNoteData);
+
 	const toAdd = {
 		userId,
-		noteTitle: encryptNoteText,
-		noteText: encryptNoteText,
-		noteData: encryptNoteData,
-		isNoteSharedWithAll: false,
+		name,
+		gender,
+		age,
+		bookingId,
+		location,
 		createdAt: serverTimestamp(),
 		updatedOn: serverTimestamp(),
 	};

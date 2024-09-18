@@ -1,6 +1,7 @@
 import React, { useCallback, useEffect, useState } from "react";
 import "../styles/userEmergencyForm.css";
 import ShowMsg from "../components/showMsg/ShowMsg";
+import { addNewNote } from "../firebase/emergencyPatientForm";
 
 import { extractEncryptedToken } from "../utils";
 
