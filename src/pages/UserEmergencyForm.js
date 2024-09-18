@@ -2,6 +2,10 @@ import React, { useCallback, useEffect, useState } from "react";
 import "../styles/userEmergencyForm.css";
 import ShowMsg from "../components/showMsg/ShowMsg";
 
+import { extractEncryptedToken } from "../utils";
+
+console.log(extractEncryptedToken(localStorage.getItem("JWT_token")));
+
 const UserEmergencyForm = () => {
 	const [msg, setMsg] = useState({ text: "", type: "" });
 	const [location, setLocation] = useState([]);
@@ -52,7 +56,19 @@ const UserEmergencyForm = () => {
 		},
 		[setImageUpload]
 	);
-	console.log(imageUpload);
+
+	const handleSubmit = useCallback(
+		(e) => {
+			e.preventDefault();
+			const name = e.target.name.value;
+			const age = e.target.age.value;
+			const gender = e.target.gender.value;
+			console.log(location);
+
+			console.log(name, age, gender);
+		},
+		[location]
+	);
 
 	return (
 		<div id="userEmergencyForm">
@@ -65,19 +81,19 @@ const UserEmergencyForm = () => {
 				<p className="description">
 					Please fill out the form below to provide information about the emergency patient.
 				</p>
-				<form id="emergencyForm">
+				<form id="emergencyForm" onSubmit={handleSubmit}>
 					<div className="form-fields">
 						<div className="form-group">
 							<label htmlFor="name">Name</label>
-							<input id="name" placeholder="Optional" />
+							<input id="name" name="name" placeholder="Optional" />
 						</div>
 						<div className="form-group">
 							<label htmlFor="age">Age</label>
-							<input id="age" type="number" placeholder="Optional" />
+							<input id="age" type="number" name="age" placeholder="Optional" />
 						</div>
 						<div className="form-group">
 							<label htmlFor="gender">Gender</label>
-							<input id="gender" placeholder="M/F" />
+							<input id="gender" name="gender" placeholder="M/F" />
 						</div>
 						<div className="form-group">
 							<label htmlFor="location">Location</label>

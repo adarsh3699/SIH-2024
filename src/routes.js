@@ -15,6 +15,7 @@ const UserForgetPass = lazy(() => import("./pages/UserForgetPass"));
 const AboutUs = lazy(() => import("./pages/AboutUs"));
 const ContactUs = lazy(() => import("./pages/ContactUs"));
 const UserEmergencyForm = lazy(() => import("./pages/UserEmergencyForm"));
+const OPDappointment = lazy(() => import("./pages/OPDappointment"));
 
 function Routes() {
 	return (
@@ -85,6 +86,16 @@ function Routes() {
 						<>
 							<NabBar />
 							<PatientPortal />
+						</>
+					}
+				/>
+				<Route
+					exact
+					path="/opd-appointment"
+					element={
+						<>
+							<NabBar />
+							<OPDappointment />
 						</>
 					}
 				/>
