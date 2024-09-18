@@ -9,7 +9,7 @@ const PatientPortal = () => {
 				<h1>Patient Portal</h1>
 				<p>Choose an option to proceed with your appointment</p>
 				<div className="button-container">
-					<NavLink className="button button-primary" to="/hospital-search">
+					<NavLink className="button button-primary" to="/opd-appointment">
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
 							width="24"

@@ -10,6 +10,8 @@ const UserEmergencyForm = () => {
 	const [msg, setMsg] = useState({ text: "", type: "" });
 	const [location, setLocation] = useState([]);
 	const [imageUpload, setImageUpload] = useState(null);
+	const [bookingId, setBookingId] = useState("");
+	const [showModal, setShowModal] = useState(false);
 
 	const handleMsgShown = useCallback((msgText, type) => {
 		if (msgText) {
@@ -57,18 +59,18 @@ const UserEmergencyForm = () => {
 		[setImageUpload]
 	);
 
-	const handleSubmit = useCallback(
-		(e) => {
-			e.preventDefault();
-			const name = e.target.name.value;
-			const age = e.target.age.value;
-			const gender = e.target.gender.value;
-			console.log(location);
+	const handleSubmit = useCallback((e) => {
+		e.preventDefault();
+		const name = e.target.name.value;
+		const age = e.target.age.value;
+		const gender = e.target.gender.value;
+		// console.log(location);
+		// console.log(name, age, gender);
 
-			console.log(name, age, gender);
-		},
-		[location]
-	);
+		const bookingId = Math.random().toString(36).substr(2, 9).toUpperCase();
+		setBookingId(bookingId);
+		setShowModal(true);
+	}, []);
 
 	return (
 		<div id="userEmergencyForm">
@@ -144,6 +146,27 @@ const UserEmergencyForm = () => {
 					<input type="file" accept="image/*" id="image" onChange={handleImageUpload} />
 				</div>
 			</div>
+
+			{showModal && (
+				<div id="confirmationModal" className="modal">
+					<div className="modal-content">
+						<span className="close" onClick={() => setShowModal(false)}>
+							&times;
+						</span>
+
+						<h2>Booking Confirmed</h2>
+
+						<p>
+							Your booking has been confirmed. Please show the following booking ID to the reception for
+							further process:
+						</p>
+
+						<p id="bookingId" style={{ fontWeight: "bold", fontSize: "1.2em" }}>
+							{bookingId}
+						</p>
+					</div>
+				</div>
+			)}
 			{msg && <ShowMsg msgText={msg?.text} type={msg?.type} />}
 		</div>
 	);

@@ -31,17 +31,11 @@ const hospitals = [
 
 const OPDappointment = () => {
 	const [selectedDepartment, setSelectedDepartment] = useState("");
-
 	const [consultationDate, setConsultationDate] = useState("");
-
 	const [showHospitals, setShowHospitals] = useState(false);
-
 	const [selectedHospital, setSelectedHospital] = useState("");
-
 	const [selectedSlot, setSelectedSlot] = useState("");
-
 	const [bookingId, setBookingId] = useState("");
-
 	const [showModal, setShowModal] = useState(false);
 
 	const handleSubmit = (e) => {
