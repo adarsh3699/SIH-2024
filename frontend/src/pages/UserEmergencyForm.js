@@ -5,7 +5,7 @@ import { addNewNote } from "../firebase/emergencyPatientForm";
 
 import { extractEncryptedToken } from "../utils";
 
-console.log(extractEncryptedToken(localStorage.getItem("JWT_token")));
+const userId = extractEncryptedToken(localStorage.getItem("JWT_token"))?.userId;
 
 const UserEmergencyForm = () => {
 	const [msg, setMsg] = useState({ text: "", type: "" });
@@ -70,6 +70,7 @@ const UserEmergencyForm = () => {
 
 		const bookingId = Math.random().toString(36).substr(2, 9).toUpperCase();
 		setBookingId(bookingId);
+		// addNewNote({ name, age, gender, bookingId, location }, userId);
 		setShowModal(true);
 	}, []);
 
