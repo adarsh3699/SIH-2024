@@ -21,7 +21,7 @@ app.get("/", function (req, res) {
 });
 
 mongoose
-	.connect(getMongoDb(), { useNewUrlParser: true })
+	.connect(getMongoDb()) // No options are required for modern versions
 	.then(() =>
 		app.listen(PORT, () => {
 			console.log(`Server is running at port ${PORT}`);
